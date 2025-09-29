@@ -13,6 +13,7 @@ The goal of this project is to practice modern frontend development, using tools
 
 
 # ✨ Features 
+
 - User authentication (Sign up / Login).
 - Product listing page.
 - Product details page.
@@ -23,22 +24,22 @@ The goal of this project is to practice modern frontend development, using tools
 
 # ⬇️ Project Setup
 
-#Clone the repository
+Clone the repository
 ```bash
 git clone https://github.com/Eman-Saleh151/souqly.git
 ```
 
-#Install dependencies
+Install dependencies
 ```bash
 npm install
 ```
 
-#Start fake API
+Start fake API
 ```bash
 npm run mock
 ```
 
-#Run development server
+Run development server
 ```bash
 npm run dev
 ```
