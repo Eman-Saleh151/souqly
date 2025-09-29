@@ -1,14 +1,9 @@
-<script setup>
-
-</script>
-
 <template>
-  <div  class="bg-mint-500">
-    <!--   Navbar هنا -->
-    <router-view /> <!-- دي هتعرض صفحة Home -->
-    <!--   Footer هنا -->
-  </div>
-
+  <DefaultLayout />
 </template>
+
+<script setup>
+  import DefaultLayout from './layouts/DefaultLayout.vue';
+</script>
 
 

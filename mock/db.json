@@ -6,7 +6,7 @@
       "price": 1200,
       "categoryId": 1,
       "stock": 5,
-      "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
+      "image": "https://i.pinimg.com/736x/1a/11/c2/1a11c2734fbc205b078385b87f0e7566.jpg",
       "isFeatured": true
     },
     {
@@ -15,7 +15,7 @@
       "price": 850,
       "categoryId": 1,
       "stock": 0,
-      "image": "https://images.unsplash.com/photo-1616628182509-18f2da5b28cf",
+      "image": "https://i.pinimg.com/1200x/ae/82/7e/ae827ee048de79b5ec7158e4c2ff8ec5.jpg",
       "isFeatured": false
     },
     {
@@ -24,7 +24,7 @@
       "price": 150,
       "categoryId": 2,
       "stock": 12,
-      "image": "https://images.unsplash.com/photo-1616627555480-63a64a6b7403",
+      "image": "https://i.pinimg.com/736x/7c/87/cc/7c87ccfe2f5ca758a02c8548c80d7f3f.jpg",
       "isFeatured": true
     },
     {
@@ -33,7 +33,7 @@
       "price": 300,
       "categoryId": 3,
       "stock": 8,
-      "image": "https://images.unsplash.com/photo-1598300055741-5d3a3a83f85f",
+      "image": "https://i.pinimg.com/736x/dd/85/66/dd8566595038d95b777332094d24e05d.jpg",
       "isFeatured": false
     },
     {
@@ -42,7 +42,7 @@
       "price": 500,
       "categoryId": 1,
       "stock": 3,
-      "image": "https://images.unsplash.com/photo-1606813903175-91dfddf6c4ed",
+      "image": "https://i.pinimg.com/1200x/ee/3b/ac/ee3bac25c9cf4679c3a4b426e009f1d8.jpg",
       "isFeatured": false
     },
     {
@@ -51,7 +51,7 @@
       "price": 200,
       "categoryId": 2,
       "stock": 15,
-      "image": "https://images.unsplash.com/photo-1606813903175-6ec4df8eaa51",
+      "image": "https://i.pinimg.com/736x/f9/8b/d0/f98bd04b298c0762101174acfd928a86.jpg",
       "isFeatured": true
     },
     {
@@ -60,7 +60,7 @@
       "price": 100,
       "categoryId": 3,
       "stock": 20,
-      "image": "https://images.unsplash.com/photo-1616628182509-3d79dbfb9181",
+      "image": "https://i.pinimg.com/1200x/61/31/a1/6131a13cd44693448322a5f3c3f45571.jpg",
       "isFeatured": false
     }
   ],
