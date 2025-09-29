@@ -13,6 +13,7 @@ The goal of this project is to practice modern frontend development, using tools
 
 
 ✨ Features 
+
 - User authentication (Sign up / Login).
 - Product listing page.
 - Product details page.
@@ -35,8 +36,4 @@ npm run mock
 
 # Run development server
 npm run dev
-
-
-
-
 
