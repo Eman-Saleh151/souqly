@@ -1,0 +1,75 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Modern Sofa",
+      "price": 1200,
+      "categoryId": 1,
+      "stock": 5,
+      "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
+      "isFeatured": true
+    },
+    {
+      "id": 2,
+      "title": "Wooden Dining Table",
+      "price": 850,
+      "categoryId": 1,
+      "stock": 0,
+      "image": "https://images.unsplash.com/photo-1616628182509-18f2da5b28cf",
+      "isFeatured": false
+    },
+    {
+      "id": 3,
+      "title": "Classic Lamp",
+      "price": 150,
+      "categoryId": 2,
+      "stock": 12,
+      "image": "https://images.unsplash.com/photo-1616627555480-63a64a6b7403",
+      "isFeatured": true
+    },
+    {
+      "id": 4,
+      "title": "Floor Rug",
+      "price": 300,
+      "categoryId": 3,
+      "stock": 8,
+      "image": "https://images.unsplash.com/photo-1598300055741-5d3a3a83f85f",
+      "isFeatured": false
+    },
+    {
+      "id": 5,
+      "title": "Bookshelf",
+      "price": 500,
+      "categoryId": 1,
+      "stock": 3,
+      "image": "https://images.unsplash.com/photo-1606813903175-91dfddf6c4ed",
+      "isFeatured": false
+    },
+    {
+      "id": 6,
+      "title": "Pendant Light",
+      "price": 200,
+      "categoryId": 2,
+      "stock": 15,
+      "image": "https://images.unsplash.com/photo-1606813903175-6ec4df8eaa51",
+      "isFeatured": true
+    },
+    {
+      "id": 7,
+      "title": "Decorative Vase",
+      "price": 100,
+      "categoryId": 3,
+      "stock": 20,
+      "image": "https://images.unsplash.com/photo-1616628182509-3d79dbfb9181",
+      "isFeatured": false
+    }
+  ],
+  "categories": [
+    { "id": 1, "name": "Furniture" },
+    { "id": 2, "name": "Lighting" },
+    { "id": 3, "name": "Accessories" }
+  ],
+  "users": [
+    { "id": 1, "name": "Eman", "email": "eman@example.com", "password": "password123" }
+  ]
+}
