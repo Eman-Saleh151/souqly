@@ -28,6 +28,7 @@ To keep the UI consistent and reusable, some shared components are placed inside
 These can be imported and used anywhere in the project.
 
 *** Toast Notification ***
+
 Location: src/components/ui/Toast.vue
 Usage: Can be called from any page (e.g. Home.vue, Login.vue) to show success/error/info messages.
 ```bash
