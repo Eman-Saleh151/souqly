@@ -77,7 +77,7 @@ Filter products by category.
 ### 📦 Categories Module
 Module to handle categories and filtering products by category.
 
-Features:
+✨ Features
 
 Fetch all categories from API.
 
