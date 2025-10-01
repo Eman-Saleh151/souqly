@@ -1,4 +1,4 @@
-#Souqly 🛒
+# Souqly 🛒
 
 Souqly is a simple **E-commerce web application** built with **Vue 3 + Vite**.  
 The goal of this project is to practice modern frontend development, using tools like:
@@ -12,7 +12,7 @@ The goal of this project is to practice modern frontend development, using tools
 - 🌐 **Axios** – For API requests (e.g. Fake API for products).
 
 
-✨ Features 
+# ✨ Features 
 
 - User authentication (Sign up / Login).
 - Product listing page.
@@ -22,18 +22,24 @@ The goal of this project is to practice modern frontend development, using tools
 - Dark / Light mode toggle.
 
 
-⬇️ Project Setup
+# ⬇️ Project Setup
+
+Clone the repository
 ```bash
-# Clone the repository
 git clone https://github.com/Eman-Saleh151/souqly.git
-cd souqly
+```
 
-# Install dependencies
+Install dependencies
+```bash
 npm install
+```
 
-# Start fake API
+Start fake API
+```bash
 npm run mock
+```
 
-# Run development server
+Run development server
+```bash
 npm run dev
-
+```
