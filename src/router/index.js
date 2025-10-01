@@ -9,6 +9,7 @@ import Signup from "../pages/Signup.vue";
 import Profile from "../pages/Profile.vue";
 import NotFound from "../pages/NotFound.vue";
 import ProductDetails  from "../pages/ProductDetails.vue";
+import CategoryProducts from "../pages/CategoryProducts.vue";
 
 
 
@@ -16,6 +17,7 @@ const routes =[
     { path:'/' , name:'home' , component:Home },
     { path:'/about' , name:'about' , component:About },
     { path:'/categories' , name:'categories' , component:Categories },
+    { path:'/categories/:id' , name:'category-products' , component:CategoryProducts , props:true },
     { path:'/products' , name:'products' , component:Products },
     { path: "/products/:id", component: ProductDetails },
     { path:'/contact' , name:'contact' , component:Contact },

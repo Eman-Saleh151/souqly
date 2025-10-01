@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import { useProductStore } from "../stores/productsStore";
+import { useProductStore } from "../stores/productStore";
+import ProductCard from "../components/ui/ProductCard.vue";
 
 const productStore = useProductStore();
 const searchQuery = ref("");
@@ -45,18 +46,12 @@ function handleFilter() {
     <div v-if="productStore.error" class="text-red-500">{{ productStore.error }}</div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <div
+      <ProductCard
         v-for="p in productStore.filteredProducts"
         :key="p.id"
-        class="bg-white shadow p-4 rounded"
-      >
-        <img :src="p.image" :alt="p.title" class="w-full h-40 object-cover rounded mb-3" />
-        <h2 class="font-semibold text-lg">{{ p.title }}</h2>
-        <p class="text-gray-600">${{ p.price }}</p>
-        <router-link :to="`/products/${p.id}`" class="text-indigo-600 hover:underline text-sm">
-          View Details
-        </router-link>
-      </div>
+        :product="p"
+      />
+
     </div>
   </div>
 </template>
