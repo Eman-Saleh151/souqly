@@ -74,6 +74,22 @@ Search products by title.
 
 Filter products by category.
 
+### 📦 Categories Module
+Module to handle categories and filtering products by category.
+
+Features:
+
+Fetch all categories from API.
+
+Display categories as buttons or links.
+
+Filter products by category ID.
+
+Retrieve category name from store (no need to pass it in URL).
+
+Works with Pinia store for state management.
+
+
 # ⬇️ Project Setup
 
 Clone the repository
