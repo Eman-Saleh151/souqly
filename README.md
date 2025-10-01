@@ -56,6 +56,24 @@ function handleLogin() {
 ```
 
 
+# 📦 Modules
+### 🛒 Products Module
+Service layer for fetching products.
+
+Pinia store with state, getters, and actions for managing products.
+
+✨ Features
+
+Fetch all products.
+
+Fetch product by ID.
+
+Featured products section (Home).
+
+Search products by title.
+
+Filter products by category.
+
 # ⬇️ Project Setup
 
 Clone the repository
