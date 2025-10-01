@@ -1,25 +1,57 @@
 import { defineStore } from "pinia";
-import api from "../services/api";
+import { getProducts, getProductById } from "../services/productService";
 
-export const useProductsStore = defineStore("products" , {
-    state : () => ({
-        products: [],
-        loading: false,
-        error: null,
-    }),
-    actions : {
-        async fetchProducts() {
-            this.loading = true;
-            this.error = null;
+export const useProductStore = defineStore("product", {
+  state: () => ({
+    products: [],
+    filteredProducts: [],
+    selectedProduct: null,
+    loading: false,
+    error: null,
+  }),
 
-            try{
-                const res = await api.get("/products");
-                this.products = res.data
-            }catch(err){
-                this.error = "Failed to fetch products";
-            }finally{
-                this.loading = false;
-            }
-        }
+   getters: {
+    featuredProducts: (state) => {
+      return state.products.filter(p => p.isFeatured);
     }
-})
+  },
+
+  actions: {
+    async fetchProducts() {
+      this.loading = true;
+      try {
+        this.products = await getProducts();
+        this.filteredProducts = this.products; 
+      } catch (err) {
+        this.error = err.message;
+      } finally {
+        this.loading = false;
+      }
+    },
+
+    async fetchProduct(id) {
+      this.loading = true;
+      try {
+        this.selectedProduct = await getProductById(id);
+      } catch (err) {
+        this.error = err.message;
+      } finally {
+        this.loading = false;
+      }
+    },
+
+    searchProducts(query) {
+      this.filteredProducts = this.products.filter(p =>
+        p.title.toLowerCase().includes(query.toLowerCase())
+      );
+    },
+
+    filterByCategory(categoryId) {
+      if (!categoryId) {
+        this.filteredProducts = this.products;
+      } else {
+        this.filteredProducts = this.products.filter(p => p.categoryId === categoryId);
+      }
+    },
+  },
+});
