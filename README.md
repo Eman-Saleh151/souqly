@@ -89,6 +89,57 @@ Retrieve category name from store (no need to pass it in URL).
 
 Works with Pinia store for state management.
 
+### 🔐 Authentication & Authorization
+
+Souqly has a simple authentication system built with **Pinia + Vue Router**.
+
+✨ Features
+
+* **Sign up**: Create new user with email & password.
+* **Login**: Authenticate existing users and store their token/session.
+* **Error handling**: Displays error message if credentials are invalid.
+* **Redirect after login**: If a user tries to access a protected page (like `Cart` or `Checkout`) without being logged in, they are redirected to the `Login` page.
+  After login, they are redirected back to the page they were trying to access.
+
+🔒 Route Guards
+
+Implemented in `router/index.js` using `beforeEach`:
+
+```js
+import { useAuthStore } from "@/stores/authStore";
+
+router.beforeEach((to, from, next) => {
+  const authStore = useAuthStore();
+
+  if (to.meta.requiresAuth && !authStore.isLoggedIn) {
+    next({ path: "/login", query: { redirect: to.fullPath } });
+  } else {
+    next();
+  }
+});
+```
+
+### 🔑 Login Page Example
+
+When login is successful, user is redirected:
+
+```js
+const handleLogin = async () => {
+  await authStore.login(email.value, password.value);
+  if (authStore.isLoggedIn) {
+    router.push(route.query.redirect || "/");
+  }
+};
+```
+
+This ensures:
+
+* Unauthorized users **can’t access protected routes**.
+* After login, user experience is smooth with redirect to intended page.
+
+---
+
+
 
 # ⬇️ Project Setup
 
