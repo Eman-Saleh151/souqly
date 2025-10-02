@@ -89,7 +89,7 @@ Retrieve category name from store (no need to pass it in URL).
 
 Works with Pinia store for state management.
 
-### 🔐 Authentication & Authorization
+### 🔐 Authentication 
 
 Souqly has a simple authentication system built with **Pinia + Vue Router**.
 
@@ -139,6 +139,11 @@ This ensures:
 
 ---
 
+# 🚀 In Coming Features
+
+- Authorization (Role-based access: Admin / User).
+- Wishlist for products.
+- Order history page.
 
 
 # ⬇️ Project Setup
