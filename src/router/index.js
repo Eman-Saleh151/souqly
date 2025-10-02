@@ -1,4 +1,6 @@
 import { createRouter , createWebHistory } from "vue-router";
+import { useAuthStore } from "@/stores/authStore";
+
 import Home from "../pages/Home.vue";
 import About from "../pages/About.vue";
 import Categories from "../pages/Categories.vue";
@@ -10,8 +12,7 @@ import Profile from "../pages/Profile.vue";
 import NotFound from "../pages/NotFound.vue";
 import ProductDetails  from "../pages/ProductDetails.vue";
 import CategoryProducts from "../pages/CategoryProducts.vue";
-
-
+import Cart from "../pages/Cart.vue";
 
 const routes =[
     { path:'/' , name:'home' , component:Home },
@@ -23,13 +24,24 @@ const routes =[
     { path:'/contact' , name:'contact' , component:Contact },
     { path:'/login' , name:'login' , component:Login },
     { path:'/signup' , name:'signup' , component:Signup },
-    { path:'/profile' , name:'profile' , component:Profile },
+    { path:'/profile' , name:'profile' , component:Profile , meta: { requiresAuth: true }},
+    { path:'/cart' , name:'cart' , component:Cart , meta: { requiresAuth: true } },
     { path:'/:pathMatch(.*)*' , name:'not-found' , component:NotFound },
 ]
 
 const router = createRouter({
     history: createWebHistory() ,
     routes
+});
+
+router.beforeEach((to, from, next) => {
+  const authStore = useAuthStore();
+
+  if (to.meta.requiresAuth && !authStore.isLoggedIn) {
+    next({ name: "login", query: { redirect: to.fullPath } });
+  } else {
+    next();
+  }
 });
 
 export default router
