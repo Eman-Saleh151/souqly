@@ -27,25 +27,25 @@ onMounted(async () => {
 
 </script>
 
+
 <template>
-  <section class="p-6">
-    <!-- اسم الفئة من getter في categoryStore -->
-    <h2 class="text-xl font-bold mb-4">
-      🛍️ Products in {{ $route.query.name}}
-    </h2>
-
-    <!-- حالة التحميل -->
-    <div v-if="productStore.loading || categoryStore.loading">
-      Loading...
-    </div>
-
-    <!-- قائمة المنتجات -->
-    <div v-else class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <ProductCard
-        v-for="p in productStore.filteredProducts"
-        :key="p.id"
-        :product="p"
-      />
-    </div>
-  </section>
+  <div class="min-h-screen flex flex-col items-center justify-start bg-gradient-to-br from-indigo-50 to-indigo-100 py-10 px-4">
+    <section class="w-full max-w-6xl bg-white/90 shadow-2xl rounded-2xl border border-indigo-100 backdrop-blur-md p-8">
+      <h2 class="text-3xl font-extrabold text-center text-indigo-700 mb-8 tracking-tight flex items-center justify-center gap-2">
+        <span class="text-4xl">🛍️</span>
+        <span>Products in {{ $route.query.name }}</span>
+      </h2>
+      <div v-if="productStore.loading || categoryStore.loading" class="flex justify-center items-center py-16">
+        <span class="animate-spin rounded-full h-8 w-8 border-4 border-indigo-300 border-t-indigo-600"></span>
+        <span class="ml-3 text-indigo-500 font-semibold">Loading...</span>
+      </div>
+      <div v-else class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <ProductCard
+          v-for="p in productStore.filteredProducts"
+          :key="p.id"
+          :product="p"
+        />
+      </div>
+    </section>
+  </div>
 </template>
