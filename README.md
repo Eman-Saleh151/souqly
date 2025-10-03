@@ -163,6 +163,12 @@ Start fake API
 ```bash
 npm run mock
 ```
+
+Run development server
+```bash
+npm run dev
+```
+
 # 🔑 Demo Login Credentials
 
 If you want to test the login functionality without creating a new account, you can use the following credentials:
@@ -174,7 +180,3 @@ If you want to test the login functionality without creating a new account, you 
 }
 ```
 
-Run development server
-```bash
-npm run dev
-```
